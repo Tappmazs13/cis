@@ -1,0 +1,36 @@
+telnet 193.41.10.1
+conf t
+ip dhcp excluded-address 193.41.20.1 193.41.20.20
+
+ip dhcp pool Voip_User
+	net 193.41.20.0 255.255.255.0
+	def 193.41.20.1
+	dns 70.70.70.10
+	domain isp.hu
+	option 150 ip 70.70.80.20
+exit
+
+do wr
+
+do telnet 70.70.80.20
+(VTYtitok)
+ena
+(enaTitok)
+CMS#
+
+conf t
+banner motd "Illetekteleneknek a belepes tilos!"
+ip route 0.0.0.0 0.0.0.0 70.70.80.1
+
+user admin pri 15 sec admin
+ip domain-n isp.hu
+crypto key gene rsa
+ (1024bit)
+ 
+line vty 0 4
+login local
+tran in ssh
+exit
+do wr
+
+
