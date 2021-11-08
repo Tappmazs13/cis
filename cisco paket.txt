@@ -1,0 +1,47 @@
+cisco paket trace
+
+a modemet összekötöm a routerrel szaggatott vonallal
+pct összekötöm egyenes vonalall a routert
+servert összekötöm egyenes vonallal a routert
+home fhonet összekötöm egyenes vonallan a router
+
+bemegyek a pcbe desktop ip->dhcp
+alul átálítom a port 3 at voipra
+utánna bemegyek a web browserbe->beírom az ip címet01 es végűt
+ha ez kész bemegyek a command prompt ba itt beirom a 70.70.70.10 et ezzel pingálok
+ha más van megadva szövegben akkor azzal pingálok
+
+ha ez kész 
+-decktop->ip cím beírása ->administration->jelszó módósitás->mentés
+ha ez kész
+setup->ip adress a 3.at átállítom 212re 
+  subnet mask->255.255.255.192 save setting
+az átált ip címmel belépek a web browserbe
+setup->start id 10 a vége,maximun number 50 save
+ping 70.70.70.10 idő ugrás
+desktop-> web browser->isp.hu-> időugrás
+
+home server -> desktop->ip configuration ->dhcp
+home pc->web br.212.1el->setup dhcp reservition
+dhcp felntartások->a 2. mac addresset másolom a 3.as helyre.
+1esbe beírom a Server 2.es 42 ->add->save
+be a pcbe ipvel.->applications&gaming->http beállítani->21es végű 42 lesz és pipa a négyzetbe
+
+pc ->wierless->network name->Home
+               5ghz->disable->save
+               wierless secutiti->2ghz->wpa2persolnal-> jelszó Almafa12->sate
+setup->kiválasztom a static ip->ip address->193.41.10.8
+                                subnet mask->255.255.255
+                                gateway:193.41.10.1
+                                dns1:70.70.70.10 save
+
+
+home tablet:config:wierless:ssid:Home
+			    wpa2:Almafa12
+
+home laptopm: kikapcsolom kiszedem belőle a cuccost és beteszem a bekészített cuccot visszakapcsolom
+config:wierless:ssd:home wpa2:jelszó almafa12
+
+kome pingelünk:70.70.70.10
+ping isp.hu
+home pc:desktop:command prompt
