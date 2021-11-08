@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+    box-sizing:border-box ;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: aqua;
+}
+.container{
+    max-width: 900px;
+    background-color: aquamarine;
+    margin: 0 auto;
+}
+.header{
+    background: url("../img/header.png")no-repeat white;
+    background-size: contain,cover;
+    background-position: right center;
+    height: 100px;
+    padding: 30px 0 0 50px;
+}
+.navigation{
+background-color: whitesmoke;
+
+}
+.navigation ul{
+    list-style-type: none; /*Eltunnek a pontok*/
+}
+.contenct::after, ul::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.navigation ul li{
+    float:left;
+    width: 12.5%;
+    border-right: 1px solid black;
+    text-align: center;
+}
+.navigation ul li:last-child{
+    border-right: none;
+}
+/*.navigation ul li a*/
+a{
+    padding: 10px 10px 20px 10px;
+    display: block;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: blue;
+}
+a:hover{
+    color: crimson;
+    text-decoration: darkgreen;
+}
+.contenct{
+    background-color: rgb(180, 154, 180);
+}
+.hasab{
+    padding: 10px;
+    float: left;
+    max-width: 50%;
+}
+h2{
+    background-color: rgb(27, 26, 26);
+    color: white;
+    padding: 20px 10px 40px 10px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+.hasab p{
+    line-height: 1.5;
+    text-align: justify;
+}
+.footer{
+    padding-top: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 0.6rem;
+    background: yellow;
+}
